@@ -56,7 +56,28 @@ let rectT2
 //console.log (rectT3);
 if (rectT3 === true) {console.log ("triangl is rectagular")} else{console.log ("triangl is'not rectagular")}
 //c
-let Cheknegativ = Len_AN && Len_BN && Len_CN;
-console.log (Cheknegativ)
-if (Cheknegativ < 1) {console.log ("Incorect Data")};
+if (Len_AN < 0 ) {console.log ("Incorect Data")};
+if (Len_BN < 0 ) {console.log ("Incorect Data")};
+if (Len_CN < 0 ) {console.log ("Incorect Data")};
+//2.5
+let hours1 = new Date().getHours();
+console.log ( hours1);
+////let timeGet = hours1 >= 12 ? "pm" : "am";
+///console.log (timeGet);
+if (hours1 > 23 && hours1 <= 5) {console.log ("good night")};
+if (hours1 >= 5 && hours1 <11) {console.log ("good morning")};
+if (hours1 >=11 && hours1 <17) {console.log ("good afternoon")};
+if (hours1 > 17 && hours1 <=23) {console.log ("good evening")};
+//2.6
+let randomM =[];
+randomM[0]= 22;
+randomM[1]= "test";
+randomM[2]= true ;
+randomM[3]= null;
+console.log ( randomM);
+randomM[4]= prompt ("set random","ran");
+console.log ( randomM[4]);
+
+
+
 
