@@ -14,6 +14,27 @@ while (i < arr.length)  {
  };
   console.log(sum1);
   //3.2
-  
-  
-
+  for (var i = 0; i <= 15;i++) {
+    if (i&1) {sum1 = i + " is odd"} else  {sum1 = i+" is even"};
+    console.log(sum1);
+  };
+  //3.3
+  function randArray(k) {
+    let r=[];
+    for (let i = 0; i <= k;i++) {
+     let ran = Math.floor(Math.random() * i);
+     let arr= r.push(ran) ;
+    };
+    console.log(r);
+  }
+  randArray(5);
+  //3.4
+  function raiseTodegre(a,b) {
+    rezult = a ** b 
+    console.log(rezult);
+  }
+  let a = prompt ( "Get number a","3")
+  let b = prompt ( "Get number b","4")
+  raiseTodegre(a,b);
+   //3.5
+   
