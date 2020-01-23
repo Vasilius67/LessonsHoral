@@ -37,4 +37,24 @@ while (i < arr.length)  {
   let b = prompt ( "Get number b","4")
   raiseTodegre(a,b);
    //3.5
-   
+   function arrayC (q,r) {
+    ////let q = [3,4,10,-5];
+   if (r==undefined) {r=1};
+      console.log (q.slice(-r));
+   };
+   console.log(arrayC ([3,4,10,-5]));
+   console.log(arrayC ([3,4,10,-5],2));
+   console.log(arrayC ([3,4,10,-5],8));
+   //3.6
+  //// 
+function uppercase(str)
+{
+  let  array1 = str.split(' ');
+  let newarray1 = [];
+  for(let i = 0; x < array1.length; i++){
+      newarray1.push(array1[i].charAt(0).toUpperCase()+array1[i].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("i love java script"));
+
