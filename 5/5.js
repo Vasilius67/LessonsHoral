@@ -16,15 +16,11 @@ function testThrow() {
   }
   //5.2 is not work
   function calcRectangleArea(w,h) {
-    let area1
-    if (typeof w == number ) {let ww = true} else {let ww = false};
-    if (typeof h == number ) {let hh = true} else {let hh = false};
-    let star = ww + hh ;
-    if (star == 2 ) { let area1 = w*h/2; }  else {let area1 = "No"};
-    
-    if (typeof star != 2 ) {
-       throw new Error("An error, is not number")} else { console.log("Area triangl are - " + area1)};
+    if (typeof w !== "number" || typeof h !== "number" ) {
+      throw new Error("An error, is not number")} ;
+     let area1 = w*h/2; 
      return area1;
+    console.log(area1);
 };
   
   try {
@@ -35,19 +31,16 @@ function testThrow() {
         console.log(exception.stack);
     };
   //  5.3 not work
-  function checkAge(nn) {
-      nn = prompt ( "HoW OLD ARe YOU?","" ) ;
-      let tt = typeof nn ;
-      let ff = ( nn <= 14 || tt !== number || nn == "");
-     if  ( ff == true ) {throw new Error("The field is empty! Please enter your age")
-    } else  { 
-      let tre = "ok"
-      console.log(tre) }
-  };
-  
+  function checkAge() {
+    nn = +prompt ( "HoW OLD ARe YOU?","" ) ;
+     if  ( nn <= 14 ||  isNaN(nn) ) {
+       throw new Error("The field is empty! Please enter your age")} ;
+     console.log(nn);
+    } ;
+ 
   try {
-        let result = checkAge();
-        console.log(result);
+         checkAge();
+        
     } catch (exception) {
         console.log(exception.name);
         console.log(exception.message);
@@ -55,19 +48,17 @@ function testThrow() {
     };
     //5.4 working//
     class MonthException {
-      constructor(message ) {
-        this.message  = message ;
-        alert(`Created a coffee-machine, power: ${power}` );
+      constructor(message) {
+        this.name = message ;
       }
-    }
+    };
+     
     function showMonthName(month) {
-      if ( month <=0 || month >= 13 == true ) {
-        throw new Error("errorN Month")} else {console.log("ok")
-      let m = [ "January", "February", "March", "April", "May", "June", 
+  if ( month <= 0 ||  typeof month == "string" || month >= 13 ) {
+    console.log(  new MonthException ('Incorrect month number') ) } ;
+  let m = [ "January", "February", "March", "April", "May", "June", 
            "July", "August", "September", "October", "November", "December" ]; 
-           let monthString = m[month]; 
+  let monthString = m[month]; 
            console.log (monthString);
           };
-
-    };
-    showMonthName(1);
+    showMonthName("df");
