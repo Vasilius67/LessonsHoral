@@ -8,7 +8,7 @@ console.log(typeof res1);
 var res2 = ("true"+2)
 console.log(res2); // "true2"
 console.log(typeof res2); // "string"
-//2.1.3
+//2.1.3.
 var res3 = true
 console.log(res3); 
 console.log(typeof res3); 
