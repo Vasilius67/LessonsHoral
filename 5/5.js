@@ -1,4 +1,4 @@
-//5.1
+///5.1
 function testThrow() {
       let a = prompt("", "An error happened");
       if (a==='An error happened') {
