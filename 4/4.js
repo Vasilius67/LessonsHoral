@@ -25,5 +25,45 @@ function showProp () {
 showProp()
 //4.3
 class Worker {
-  constructor(){}
+  constructor(fullName,dayRate,workingDays){
+    this.fullName = fullName ;
+    this.dayRate = dayRate ;
+    this.workingDay = workingDays ;
+  }
+  showSalary() {
+    console.log( this.dayRate *  this.workingDay );
+  }
+  _showExp = 1.2 
+  showSalaryWithExperience () {
+  console.log( this.dayRate *  this.workingDay );
+  console.log( this._showExp );
+  let tt = this.dayRate *  this.workingDay
+  return tt
+ }
+ get showExp () {
+   return this._showExp
+ }
+ set showExp (value) {
+   this._showExp = 1.5
 }
+}
+let worker1 = new Worker("John Johnson", 20, 23);
+console.log(worker1.fullName + "salary:" +  worker1.showSalaryWithExperience () );
+console.log("New experience: " + worker1.showExp);                 
+worker1.showSalary();
+
+worker1.showSalaryWithExperience();
+worker1.showExp = 1.5;
+console.log("New experience: " + worker1.showExp);
+worker1.showSalaryWithExperience();
+
+let worker2 = new Worker("Tom Tomson", 48, 22);
+//4.4
+class Person {
+constructor(name,surname){
+  this.fullName = fullName ;
+  this.dayRate = dayRate ;
+  this.workingDay = workingDays ;
+}
+showFullName(){} 
+};

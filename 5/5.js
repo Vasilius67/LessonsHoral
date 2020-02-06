@@ -56,7 +56,7 @@ function testThrow() {
     function showMonthName(month) {
   if ( month <= 0 ||  typeof month == "string" || month >= 13 ) {
     console.log(  new MonthException ('Incorrect month number') ) } ;
-  let m = [ "January", "February", "March", "April", "May", "June", 
+  let m = [ "","January", "February", "March", "April", "May", "June", 
            "July", "August", "September", "October", "November", "December" ]; 
   let monthString = m[month]; 
            console.log (monthString);
